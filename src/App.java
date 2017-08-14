@@ -1,7 +1,4 @@
-import java.util.Scanner;
 
-import model.User;
-import post.Post;
 
 public class App {
 
@@ -10,6 +7,9 @@ public class App {
 
 		FacebookManager fbm = new FacebookManager();
 		fbm.init();
+		
+		
+		
 
 	}
 
