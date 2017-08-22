@@ -2,9 +2,8 @@ package post;
 
 import java.util.Date;
 
-public class Post implements Comparable<Post> {
+public class Post extends AbstractPost<Post> {
 
-	private String title;
 	private String text;
 	private Date creationTime;
 
@@ -13,16 +12,13 @@ public class Post implements Comparable<Post> {
 	}
 
 	public Post(Date creationDate, String title, String text) {
-		this.title = title;
+		super(creationDate, title);
 		this.text = text;
-		this.creationTime = creationDate;
 	}
 
 	@Override
 	public int compareTo(Post o) {
-		// return this.creationTime.compareTo(o.creationTime);
-
-		return this.title.compareTo(o.title);
+		return -1;//this.title.compareTo(o.title);
 	}
 
 	@Override
@@ -34,5 +30,8 @@ public class Post implements Comparable<Post> {
 		// TODO Auto-generated method stub
 		return title;
 	}
-
+	public String getText() {
+		// TODO Auto-generated method stub
+		return text;
+	}
 }
